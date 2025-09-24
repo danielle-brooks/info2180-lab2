@@ -1,0 +1,141 @@
+/* Global Defaults */
+body {
+  font-size: 18px;
+  color: #2D3748;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+/* Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* main content + sidebar */
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  grid-column: 1 / -1; /* span across both columns */
+  background-color: #63B3ED;
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Flexbox inside header */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Main content */
+main {
+  grid-column: 1 / 2;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+article h2 {
+  font-size: 32px;
+  color: #48BB78;
+}
+
+.post-meta {
+  color: #718096;
+  font-size: 0.9em;
+}
+
+.post-img {
+  max-width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+.post-img.left {
+  float: left;
+}
+
+.post-img.right {
+  float: right;
+}
+
+/* Sidebar */
+aside {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
+
+.about {
+  background-color: #E2E8F0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.about h3 {
+  color: #000000;
+}
+
+.social h3,
+.archives h3 {
+  color: #48BB78;
+}
+
+.social ul,
+.archives ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social a,
+.archives a {
+  color: #4299E1;
+  text-decoration: none;
+}
+
+.social a:hover,
+.archives a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 15px;
+  background: #2C5282;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
